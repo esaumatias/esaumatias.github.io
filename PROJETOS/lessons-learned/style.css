@@ -1,0 +1,110 @@
+body {
+  width: 1366px;
+  height: 768px;
+  background-color: rgb(253, 251, 251);
+  margin: auto;
+}
+
+#cabecalho {
+  position: fixed;
+  top: 0;
+  background-color: rgb(71, 248, 204);
+  width: 1366px;
+  height: 110px;
+  text-align: center;
+}
+
+#cabecalho li {
+  list-style: none;
+  display: inline-block;
+}
+
+#cabecalho a {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  font-family: sans-serif;
+}
+
+#cabecalho a:hover {
+  color: rgb(247, 248, 241);
+  background-color: aquamarine;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+#minha_foto {
+  display: block;
+  margin: auto;
+  width: 400px;
+  margin-top: 110px;
+}
+
+section {
+  text-align: center;
+  margin: auto;
+}
+
+ol {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+ul {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#lado-direito {
+  display: inline-block;
+  margin: auto;
+  width: 300px;
+}
+
+#lado-esquerdo {
+  display: inline-block;
+  margin: auto;
+  width: 600px;
+}
+
+aside p {
+  line-height: 2;
+}
+
+#lado-esquerdo p {
+  display: inline-block;
+  margin: auto;
+  line-height: 2;
+}
+
+aside {
+  display: inline-block;
+  margin: auto;
+  width: 250px;
+  background-color: rgb(184, 201, 197);
+  border: 2px solid rgb(71, 248, 204);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(71, 248, 204);
+}
+
+table {
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+td {
+  font-size: 20px;
+}
+
+tr {
+  background-color: aqua;
+}
