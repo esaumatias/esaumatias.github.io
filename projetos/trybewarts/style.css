@@ -1,157 +1,230 @@
-html {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: hsl(0, 0%, 90%);
-}
-
-main {
-  display: flex;
+  background-color: rgb(164, 199, 174);
+  font-size: 20px;
 }
 
 .header {
-  background-color: rgb(50, 167, 145);
-  padding: 1%;
   display: flex;
+  background-color: rgb(50, 167, 145);
+  width: 100%;
+  height: 100px;
   justify-content: space-between;
-  align-items: center;
-  margin: -10px;
 }
-
-/* .trybewarts-header-logo {
-
-} */
 
 .trybewarts-login {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
-.email {
-  border-radius: 6px;
-  height: 30px;
-  width: 140px;
+.inputLoginEmail , .inputLoginSenha , .buttonHeader {
+  height: 40px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 0 5px;
   border: none;
+  padding: 5px;
 }
 
-.password {
-  border-radius: 6px;
-  height: 30px;
-  width: 140px;
-  border: none;
-}
-
-.entrada {
-  border-radius: 6px;
-  height: 30px;
-  width: 120px;
-  border: none;
-  background-color: rgb(52, 8, 109);
+.buttonHeader {
+  background-color: rgb(22, 97, 158);
+  margin-right: 10px;
   color: white;
-  font-weight: 600;
 }
 
 #trybewarts-header-title {
   display: flex;
-  align-self: center;
+  align-items: center;
   color: white;
+  font-size: 45px;
 }
 
-#title-form {
+main {
   display: flex;
-  margin: 30px 320px;
+  justify-content: center;
+  align-items: center;
 }
 
 #evaluation-form {
   display: flex;
-  width: 675px;
   flex-direction: column;
+  width: 675px;
 }
 
 #trybewarts-forms-logo {
   height: 500px;
-  margin-left: 250px;
 }
 
-#nameLastName {
+#sectionData , #formEmail {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 5%;
-  margin-left: 20%;
-  margin-bottom: 5px;
-  justify-content: space-evenly;
-  width: 700px;
+  justify-content: center;
+  align-items: stretch;
 }
 
-#emailHouse {
+#evaluation-form div {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  margin: 1%;
-  margin-left: 20%;
-  margin-bottom: 24px;
-  justify-content: space-evenly;
-  width: 700px;
+  justify-content: space-between;
 }
 
-#family {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 160px;
-  font-size: 17px;
-}
-
-.family {
-  display: flex;
-}
-
-.label {
-  display: flex;
-  align-self: flex-start;
-}
-
-#rate {
-  display: flex;
-}
-
-#input-name {
-  border-radius: 6px;
-  height: 50px;
-  width: 300px;
+#evaluation-form [ type = 'text' ] {
+  height: 40px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 0 10px;
   border: none;
+  padding: 5px;
 }
 
-#input-lastname {
-  border-radius: 6px;
-  height: 50px;
-  width: 300px;
-  border: none;
-}
-
-#input-email {
-  border-radius: 6px;
-  height: 50px;
-  width: 300px;
-  border: none;
-}
-
-#house {
-  border-radius: 6px;
-  height: 50px;
-  width: 230px;
+select {
+  height: 40px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 0 10px;
   border: none;
   background-color: white;
+  padding: 5px;
 }
 
-#label-content {
+#evaluation-form , #formEmail {
+  margin-top: 15px;
+}
+
+#sectionData {
   display: flex;
-  justify-content: flex-end;
-  width: 900px;
+  width: 100%;
 }
 
-#label-family {
-  font-weight: 600;
-  margin-left: 10px;
+.sectionHr {
+  display: flex;
+  width: 100%;
+}
+
+hr {
+  margin: 20px 13px;
+  width: 100%;
+}
+
+#familyLearGeral {
+  display: flex;
+  width: 100%;
+}
+
+#sectionFamily {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#sectionFamily div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#sectionFamily div p {
+  margin-bottom: 10px;
+}
+
+#learn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#learn div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+#learn input {
+  align-content: space-between;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#avaliation div , #label-rate {
+  display: flex;
+}
+
+.textAreaGeral {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+#counter {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 8px;
+  margin-left: 95%;
+  padding: 5px;
+}
+
+#avaliation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avaliation div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avaliation div [ type = 'radio' ] {
+  display: flex;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+main h2 {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+#submit-btn {
+  background-color: aliceblue;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background-color: rgb(50, 167, 145);
+  width: 100%;
+  height: 60px;
+  color: white;
 }
