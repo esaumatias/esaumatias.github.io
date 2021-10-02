@@ -11,7 +11,7 @@ for (let index = 0; index < 4; index += 1) {
   }
 }
 
-function div() {
+const div = () => {
   const creatDiv = document.createElement('div');
   creatDiv.className = 'pixel';
   return creatDiv;
@@ -19,7 +19,7 @@ function div() {
 
 const paiPixel = document.querySelector('#pixel-board');
 
-function criaDivs() {
+const criaDivs = () => {
   for (let index = 0; index <= 24; index += 1) {
     paiPixel.appendChild(div());
   }
@@ -32,7 +32,7 @@ blackLoca.className = 'color selected';
 const paletaDeCores = document.querySelector('#color-palette');
 const corDaPaleta = paletaDeCores.children;
 
-function selecionar(evento) {
+const selecionar = (evento) => {
   for (const lista of corDaPaleta) {
     for (const index of lista.classList) {
       if (index === 'selected') {
@@ -47,7 +47,7 @@ for (const lista of corDaPaleta) {
 }
 
 let armaCor = 'black';
-function selecionarCor(evento) {
+const selecionarCor = (evento) => {
   armaCor = evento.target.style.backgroundColor;
   console.log(armaCor);
 }
@@ -57,7 +57,7 @@ for (const lista of corDaPaleta) {
 
 const filhoPixel = paiPixel.children;
 
-function mudarCor(evento) {
+const mudarCor = (evento) => {
   if (armaCor === 'black') {
     evento.target.classList.add('black');
   } else if (armaCor === 'blue') {
@@ -72,7 +72,7 @@ for (let lista of filhoPixel) {
   lista.addEventListener('click', mudarCor);
 }
 
-function remove() {
+const remove = () => {
  for (const lista of filhoPixel) {
     lista.classList.remove('black');
     lista.classList.remove('blue');
