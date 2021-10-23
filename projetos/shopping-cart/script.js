@@ -85,7 +85,7 @@ function createProductItemElement({ sku, name, image, salePrice }) {
   const button = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!');
   button.addEventListener('click', () => {
     adicionaCar({ sku, name, image });
-    cartItems.push({ sku, name, salePrice });
+    cartItems.push({ sku, name, salePrice, image });
     saveCartItems(JSON.stringify(cartItems));
     priceTotal(salePrice);
   });
