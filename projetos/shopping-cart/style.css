@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.item {
+  border: 2px solid rgb(211, 211, 219);
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+}
+
+.item .item__sku {
+  display: none;
+}
+
+.item .item__title {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .item__image {
+  width: 100%;
+}
+
+.item .item__add {
+  background-color: rgb(9, 12, 175);
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px;
+  color: white;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  width: 100%;
+  background-color: rgb(226, 236, 236);
+  height: 100%;
+  margin-top: 10px;
+}
+
+.cart .empty-cart {
+  width: 200px;
+  position: fixed;
+  bottom: 10%;
+  top: 85%;
+}
+
+.cart .cart__title {
+  flex-basis: 1;
+  font-size: 16pt;
+  text-align: center;
+}
+
+.cart .cart__items{
+  align-self: flex-end;
+  overflow-y: scroll ;
+  height: 430px;
+  margin-top: 15px;
+  margin-right: 3px;
+  padding: 10px;
+}
+
+.cart .cart__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.item_img {
+  order: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 5px;
+}
+
+.item_text {
+  order: 2;
+}
+
+.container-geral {
+  display: flex;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.rigth {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.lefth-hearder {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(13, 56, 43);
+  padding: 15px;
+  margin-bottom: 5px;
+  color: white;
+  position: fixed;
+  width: 78%;
+}
+
+.lefth-hearder img {
+  width: 18px;
+  margin: 0;
+}
+
+.rigth-hearder {
+  background-color: rgb(21, 129, 93);
+  padding: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: white;
+}
+
+.price{
+  display: flex;
+  width: 200px;
+  position: fixed;
+  align-items: center;
+  top: 75%;
+}
