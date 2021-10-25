@@ -1,10 +1,16 @@
 body {
   margin: 0;
+  width: 100%;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+}
+
+.container-geral {
+  display: flex;
   width: 100%;
 }
 
@@ -14,7 +20,7 @@ body {
   margin: auto;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 .item {
@@ -58,7 +64,6 @@ body {
   width: 100%;
   background-color: rgb(226, 236, 236);
   height: 100%;
-  margin-top: 10px;
 }
 
 .cart .empty-cart {
@@ -77,7 +82,7 @@ body {
 .cart .cart__items{
   align-self: flex-end;
   overflow-y: scroll ;
-  height: 430px;
+  height: 66%;
   margin-top: 15px;
   margin-right: 3px;
   padding: 10px;
@@ -118,6 +123,7 @@ body {
   width: 20%;
   position: fixed;
   right: 0;
+  left: 80%;
   bottom: 0;
   top: 0;
 }
@@ -131,8 +137,12 @@ body {
   padding: 15px;
   margin-bottom: 5px;
   color: white;
+  height: 18px;
   position: fixed;
-  width: 78%;
+  right: 20%;
+  left: 0;
+  bottom: 0;
+  top: 0;
 }
 
 .lefth-hearder img {
@@ -142,10 +152,11 @@ body {
 
 .rigth-hearder {
   background-color: rgb(21, 129, 93);
-  padding: 15px;
-  margin-bottom: 5px;
   text-align: center;
   color: white;
+  width: 100%;
+  padding: 14px;
+  height: 21px;
 }
 
 .price{
@@ -154,4 +165,14 @@ body {
   position: fixed;
   align-items: center;
   top: 75%;
+}
+
+footer {
+  background-color: rgb(13, 56, 43);
+  width: 80%;
+  height: 25px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  color: white;
 }

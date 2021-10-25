@@ -43,8 +43,8 @@ function createCartItemElement({ sku, name, salePrice, image }) {
   li.className = 'cart__item';
   li.addEventListener('click', (event) => cartItemClickListener(event, sku));
   classCartItems.appendChild(li);
-  li.appendChild(createCustomElement('img', 'item_img')).src = image;
   const text =` SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`
+  li.appendChild(createCustomElement('img', 'item_img')).src = image;
   li.appendChild(createCustomElement('p', 'item_text')).innerText = text;
   return li;
 }
