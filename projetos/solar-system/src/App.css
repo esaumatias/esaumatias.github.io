@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: url('/src/images/53KJD89\ \(1\).jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: auto;
+  width: auto;
+}
+
+.solarSystem {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.planetcard {
+  display: flex;
+  font-size: 20px;
+}
+
+.cardPlanet {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-around;
+  text-align: center;
+  width: 120px;
+}
+
+.missions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 90%;
+}
+
+.missionCards {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.mission-card {
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  margin: 5px;
+  opacity: 0.6;
+  text-align: center;
+  width: 170px;
+}
+
+.mission-card:hover {
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.titleHeader {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
