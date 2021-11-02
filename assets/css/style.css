@@ -1,0 +1,293 @@
+* {
+    font-family: Arial;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #e5e2e2;
+}
+#background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90px;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+
+.logoHeader {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+}
+
+.logoHeader h1{
+    margin: 0;
+    font-size: 40px;
+}
+
+.logoHeader span{
+    margin: 0;
+    font-size: 12px;
+}
+
+.logo,
+.menu, 
+.social {
+    display: flex;
+    align-items: center;
+    
+}
+.logoBOla {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: solid;
+    background-color:#f3f1f1 ;
+    background: linear-gradient(20deg, #3e523e,#284d30, #235e1f, #023a02 );
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+.logoBOla a {
+    color: white;
+}
+
+.logoBOla button {
+    text-decoration: none;
+    text-transform: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+nav ul, 
+nav li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+nav ul {
+    display: flex;
+}
+nav a {
+    display: block;
+    padding:  15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #030303;
+}
+nav .active a,
+nav a:hover {
+    text-decoration: underline;
+    color: #636363;
+}
+
+.logoBOla:hover {
+    background: none;
+    background: linear-gradient(#cccccc,#979595,#4b4a4a,#313131);
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#banner h1 {
+    color: white;
+}
+
+.fotoHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoEU img{
+    display: flex;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+} 
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin-left: 20px;
+}
+
+.bannerTitle {
+    font-size: 50px;
+}
+
+.bannerTitle span {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.sobreMim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.sobreMim p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.contatos2 {
+    background-color:#f3f1f1 ;
+    background: linear-gradient(20deg, #3e523e,#284d30, #235e1f, #023a02 );
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+}
+
+.contatos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    background-color:#f3f1f1 ;
+    background: linear-gradient(20deg, #3e523e,#284d30, #235e1f, #023a02 );
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+}
+
+.contatos div {
+    margin: 0px;
+    padding: 8px;
+    padding-bottom: 0px;
+}
+.contatos div h6 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    color: #4b4a4a;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.contatos div h5 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    color: #050505;
+    margin: 0px;
+    padding: 0px;
+}
+
+.social div a img {
+    width: 30px;
+    padding: 3px;
+}
+.social div a img:hover, 
+.social div a img:focus{
+    transform: translateX(0px) scale(1.5);
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects .titleProject {
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration:overline;
+    text-transform: uppercase;
+    color: linear-gradient(20deg, #aedaae,#59d473, #16e60f, #057405 );;
+}
+
+.projects h1 {
+    text-decoration:none;
+    text-transform: none;
+    font-weight: none;
+}
+
+.projectContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.cardProject {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 1s;
+    transform: translateX(0) scale(0.9);
+}
+
+.cardProject:hover,
+.cardProject:focus {
+    transform: translateX(0px) scale(1.1);
+    opacity: 1;
+}
+
+.cardProject .imgProject {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: #030303;
+}
+
+footer .contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+}
