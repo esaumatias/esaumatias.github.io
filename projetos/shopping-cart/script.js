@@ -22,12 +22,7 @@ function getSkuFromProductItem(item) {
   
 }
 
-function cartItemClickListener(event, sku) {
-  // coloque seu código aqui
-  const findElement = cartItems.find((item) => item.sku === sku);
-  const findIndexOfElement = cartItems.indexOf(findElement);
-  cartItems.splice(findIndexOfElement, 1);
-  saveCartItems(JSON.stringify(cartItems));
+function cartItemClickListener(event) {
   event.target.remove();
 }
 
@@ -41,12 +36,11 @@ function clearAllCar() {
 function createCartItemElement({ sku, name, salePrice, image }) {
   const li = document.createElement('li');
   li.className = 'cart__item';
-  li.addEventListener('click', (event) => cartItemClickListener(event, sku));
+  li.addEventListener('click', (event) => cartItemClickListener(event));
   classCartItems.appendChild(li);
   const text =` SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`
   li.appendChild(createCustomElement('img', 'item_img')).src = image;
   li.appendChild(createCustomElement('p', 'item_text')).innerText = text;
-  return li;
 }
 
 const divPriceTotal = () => {
@@ -62,10 +56,9 @@ function priceTotal(price) {
   div.innerText = atual;
 }
 
-async function adicionaCar(object) {
-  const valores = object.sku;
+async function adicionaCar(sku) {
   const itemSection = document.querySelector('.cart__items'); 
-  const data = await fetchItem(valores);
+  const data = await fetchItem(sku);
   const itemObject = {
     sku: data.id,
     name: data.title,
@@ -84,7 +77,7 @@ function createProductItemElement({ sku, name, image, salePrice }) {
   section.appendChild(createProductImageElement(image));
   const button = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!');
   button.addEventListener('click', () => {
-    adicionaCar({ sku, name, image });
+    adicionaCar( sku );
     cartItems.push({ sku, name, salePrice, image });
     saveCartItems(JSON.stringify(cartItems));
     priceTotal(salePrice);
@@ -92,7 +85,6 @@ function createProductItemElement({ sku, name, image, salePrice }) {
   
   clearAllCar();
   section.appendChild(button);
-  
   return section;
 }
 
@@ -106,8 +98,9 @@ async function carregaProdutos(produto) {
       image: item.thumbnail,
       salePrice: item.price,
     };
-    const section = createProductItemElement(itemObject);
-    itemSection.appendChild(section);
+    const card = createProductItemElement(itemObject);
+    itemSection.appendChild(card);
+    carregandoPag.remove();
   });
 }
 
@@ -120,13 +113,6 @@ const getFromLocalStorage = () => {
   }
 };
 
-const Sleep = () => fetchProducts('computador').then((value) => {
-  value.results.forEach((item) => {
-    createProductItemElement(item);
-  });
-  carregandoPag.remove();
-});
-
 function apagaStorage() {
     const div = document.querySelector('.total-price');
     div.innerHTML = 0;
@@ -138,7 +124,6 @@ function apagaStorage() {
 }
 
 window.onload = () => { 
-  Sleep();
   carregaProdutos('computador');
   divPriceTotal();
   getFromLocalStorage();
